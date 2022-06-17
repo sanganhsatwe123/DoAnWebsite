@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WebsiteDuLichDiaPhuong.Models.TINTUC>
+
+@{
+    ViewBag.Title = "TrangChinh";
+    Layout = "~/Views/Shared/_LayoutNguoiDung.cshtml";
+}
+
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5 pb-3">
+        @foreach (var item in Model)
+        {
+            <h2 style="text-align: center; color: brown; padding-top: 40px; margin-left: 50px"> @item.TieuDe </h2>
+            <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                <img class="img-fluid" src="~/Images/@item.HINHANH.TenHinhAnh" style="max-width: 100%; padding-top: 50px; margin-left: 50px" alt="">
+            </a>
+            <p style="text-align: justify; margin-left: 50px">@item.NoiDungTinTuc</p>
+        }
+    </div>
+</div>
