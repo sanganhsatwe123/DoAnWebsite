@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebsiteDuLichDiaPhuong.Models.TINTUC>
+
+@{
+    var a = "";
+    ViewBag.Title = "SuKien";
+    Layout = "~/Views/Shared/_LayoutNguoiDung.cshtml";
+}
+
+<h2 style="text-align: center; color: brown">SỰ KIỆN</h2>
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5 pb-3">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 pb-1">
+                <p class="text-center">@item.TieuDe</p>
+                <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                    <img class="img-fluid" src="~/Images/@item.HINHANH.TenHinhAnh" style="width: 400px; height: 250px" alt="">
+                </a>
+                <p style="text-align: justify">@item.NoiDungTinTuc</p>
+                @if (item.NoiDungTinTuc != null)
+                {
+                    if (item.NoiDungTinTuc.Length < 100)
+                    {
+                        a = item.NoiDungTinTuc.ToString();
+                    }
+                    else
+                    {
+                        a = item.NoiDungTinTuc.Substring(0, 100);
+                    }
+                    @a <label>...</label> }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.NoiDungTinTuc)
+                }
+            </div>
+        }
+    </div>
+</div>
+
+

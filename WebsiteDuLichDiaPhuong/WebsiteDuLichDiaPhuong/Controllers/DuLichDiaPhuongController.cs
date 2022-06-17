@@ -44,5 +44,23 @@ namespace WebsiteDuLichDiaPhuong.Controllers
             var chiTietDiaDanh = dbDuLich.DIADANHs.Where(n => n.MaHuyen == id);
             return View(chiTietDiaDanh);
         }
+
+        public ActionResult TinTuc()
+        {
+            var tinTuc = dbDuLich.TINTUCs.ToList();
+            return View(tinTuc);
+        }
+
+        public ActionResult KhachSan()
+        {
+            var ks = dbDuLich.KHACHSANs.ToList();
+            return View(ks);
+        }
+
+        public ActionResult SuKien()
+        {
+            var sk = dbDuLich.TINTUCs.Where(n => n.MaTheLoai == 2);
+            return View(sk);
+        }
     }
 }

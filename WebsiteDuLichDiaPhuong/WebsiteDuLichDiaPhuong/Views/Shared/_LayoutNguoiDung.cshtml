@@ -79,8 +79,8 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a href="@Url.Action("TrangChu", "DuLichDiaPhuong")" class="nav-item nav-link ">Trang chủ</a>
                             <a href="@Url.Action("TrangChinh", "GioiThieu")" class="nav-item nav-link">Giới thiệu Đà Nẵng</a>
-                            <a href="shop.html" class="nav-item nav-link">Tin tức</a>
-                            <a href="detail.html" class="nav-item nav-link">Sự kiện</a>
+                            <a href="@Url.Action("TinTuc","DuLichDiaPhuong")" class="nav-item nav-link">Tin tức</a>
+                            <a href="@Url.Action("SuKien","DuLichDiaPhuong")" class="nav-item nav-link">Sự kiện</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dịch vụ</a>
                                 <div class="dropdown-menu rounded-0 m-0">
@@ -88,7 +88,7 @@
                                     <a href="checkout.html" class="dropdown-item">Tour du lịch</a>
                                 </div>
                             </div>
-                            <a href="contact.html" class="nav-item nav-link">Khách sạn</a>
+                            <a href="@Url.Action("KhachSan","DuLichDiaPhuong")" class="nav-item nav-link">Khách sạn</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             <a href="" class="nav-item nav-link">Đăng nhập</a>
@@ -146,7 +146,7 @@
                 <a href="" class="text-decoration-none">
                     <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">Team Đụt</span>Travel</h1>
                 </a>
-                <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore amet erat.</p>
+                <p>Đây là dòng text mang tính tưỡng chung(minh họa cho designer hiểu) nó không mang ý nghĩa gì to lớn, nên đừng để ý.</p>
                 <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
                 <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>hoanglamxh790@gmail.com</p>
                 <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>0912 567 790</p>
@@ -156,11 +156,17 @@
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-dark mb-4">Liên kết nhanh</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Trang chủ</a>
-                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Tin tức</a>
-                            <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Sự kiện</a>
-                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Dịch vụ</a>
-                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Khách sạn</a>
+                            <a class="text-dark mb-2" href="@Url.Action("TrangChu","DuLichDiaPhuong")"><i class="fa fa-angle-right mr-2"></i>Trang chủ</a>
+                            <a class="text-dark mb-2" href="@Url.Action("TinTuc","DuLichDiaPhuong")"><i class="fa fa-angle-right mr-2"></i>Tin tức</a>
+                            <a class="text-dark mb-2" href="@Url.Action("SuKien","DuLichDiaPhuong")"><i class="fa fa-angle-right mr-2"></i>Sự kiện</a>
+                            <div class="nav-item dropdown d-flex flex-column justify-content-start">
+                                <a href="#" class="nav-link dropdown-toggle text-dark mb-2" data-toggle="dropdown">Dịch vụ</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="cart.html" class="dropdown-item">Nhà hàng</a>
+                                    <a href="checkout.html" class="dropdown-item">Tour du lịch</a>
+                                </div>
+                            </div>
+                            <a class="text-dark mb-2" href="@Url.Action("KhachSan","DuLichDiaPhuong")"><i class="fa fa-angle-right mr-2"></i>Khách sạn</a>
                             <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Liên hệ</a>
                         </div>
                     </div>
